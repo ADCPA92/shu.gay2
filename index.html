@@ -11,10 +11,34 @@
       height: 100%;
       background-color: black;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    header.rainbow-text {
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      padding: 16px;
+      text-align: center;
+      user-select: none;
+      background: linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
     }
     video {
+      flex-grow: 1;
       width: 100%;
-      height: 100%;
       object-fit: cover;
     }
     #unmuteBtn {
@@ -33,6 +57,7 @@
   </style>
 </head>
 <body>
+  <header class="rainbow-text">Shu...</header>
   <video id="myVideo" autoplay muted loop playsinline>
     <source src="Snaptik.app_7369422765524258053.mp4" type="video/mp4" />
     Your browser does not support the video tag.
