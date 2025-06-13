@@ -1,85 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>shu.gay</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background-color: black;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    header.rainbow-text {
-      font-weight: bold;
-      font-family: Arial, sans-serif;
-      font-size: 24px;
-      padding: 16px;
-      text-align: center;
-      user-select: none;
-      background: linear-gradient(
-        90deg,
-        red,
-        orange,
-        yellow,
-        green,
-        blue,
-        indigo,
-        violet
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      color: transparent;
-      width: 100%;
-    }
-    video {
-      width: 1280px;
-      height: 720px;
-      object-fit: cover;
-      display: block;
-      background: black;
-      margin: 0 auto;
-      flex-shrink: 0;
-    }
-    #unmuteBtn {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      padding: 10px 16px;
-      font-size: 16px;
-      border: none;
-      border-radius: 6px;
-      background-color: rgba(255, 255, 255, 0.8);
-      color: black;
-      cursor: pointer;
-      z-index: 10;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>shu.gay GIF Layout</title>
+<style>
+  body {
+    margin: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  header.rainbow-text {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 16px;
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      indigo,
+      violet
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    user-select: none;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(7, 120px);
+    grid-template-rows: repeat(7, 120px);
+    gap: 8px;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+  }
+  /* Positions of the center 4 big gifs */
+  .center-gif {
+    width: 120px;
+    height: 120px;
+  }
+  /* Smaller gifs around */
+  .small-gif {
+    width: 80px;
+    height: 80px;
+  }
+</style>
 </head>
 <body>
-  <header class="rainbow-text">Shu...</header>
-  <video id="myVideo" autoplay muted loop playsinline>
-    <source src="Snaptik.app_7369422765524258053.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
 
-  <button id="unmuteBtn">🔊 Unmute</button>
+<header class="rainbow-text">Shu...</header>
 
-  <script>
-    const video = document.getElementById("myVideo");
-    const unmuteBtn = document.getElementById("unmuteBtn");
+<div class="container">
+  <!-- Row 1: all small gifs -->
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
 
-    unmuteBtn.addEventListener("click", () => {
-      video.muted = false;
-      video.volume = 1.0;
-      unmuteBtn.style.display = "none";
-    });
-  </script>
+  <!-- Row 2 -->
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1729536736397559.gif" class="center-gif" />
+  <img src="1729536736397559.gif" class="center-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+
+  <!-- Row 3 -->
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1729536736397559.gif" class="center-gif" />
+  <img src="1729536736397559.gif" class="center-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+
+  <!-- Row 4 -->
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+  <img src="1544021267594.gif" class="small-gif" />
+</div>
+
 </body>
 </html>
