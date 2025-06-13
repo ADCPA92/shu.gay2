@@ -13,6 +13,7 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      align-items: center;
     }
     header.rainbow-text {
       font-weight: bold;
@@ -35,11 +36,16 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       color: transparent;
+      width: 100%;
     }
     video {
-      flex-grow: 1;
-      width: 100%;
+      width: 1280px;
+      height: 720px;
       object-fit: cover;
+      display: block;
+      background: black;
+      margin: 0 auto;
+      flex-shrink: 0;
     }
     #unmuteBtn {
       position: absolute;
