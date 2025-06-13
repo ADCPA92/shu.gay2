@@ -5,30 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>shu.gay</title>
   <style>
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       background-color: black;
       overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
-
     video {
-      max-width: 1920px;
-      max-height: 1080px;
       width: 100%;
-      height: auto;
-      display: block;
+      height: 100%;
+      object-fit: cover;
+    }
+    #unmuteBtn {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 16px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: black;
+      cursor: pointer;
+      z-index: 10;
     }
   </style>
 </head>
 <body>
-  <video autoplay muted loop playsinline>
+  <video id="myVideo" autoplay muted loop playsinline>
     <source src="Snaptik.app_7369422765524258053.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
+
+  <button id="unmuteBtn">🔊 Unmute</button>
+
+  <script>
+    const video = document.getElementById("myVideo");
+    const unmuteBtn = document.getElementById("unmuteBtn");
+
+    unmuteBtn.addEventListener("click", () => {
+      video.muted = false;
+      video.volume = 1.0;
+      unmuteBtn.style.display = "none";
+    });
+  </script>
 </body>
 </html>
